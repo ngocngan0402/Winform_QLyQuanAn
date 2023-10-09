@@ -58,7 +58,7 @@ namespace QLYQUANAN
                 e.Cancel = true;
             }
         }
-
+        //afasfasf
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
