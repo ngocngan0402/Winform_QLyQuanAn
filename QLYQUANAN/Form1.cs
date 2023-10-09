@@ -44,7 +44,7 @@ namespace QLYQUANAN
         {
             return AccountDAO.Instance.Login (userName, passWord);  
         }
-           
+           //11
 
         private void btnExit_Click(object sender, EventArgs e)
         {
