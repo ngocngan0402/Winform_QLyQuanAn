@@ -38,7 +38,7 @@ namespace QLYQUANAN
             {
                 MessageBox.Show("sai tên tài khoảng hoặc mật khẩu!");
             }
-
+            //master test
         }
         bool Login (string userName, string passWord)
         {
