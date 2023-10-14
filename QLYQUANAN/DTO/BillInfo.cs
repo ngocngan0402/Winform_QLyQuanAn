@@ -19,8 +19,8 @@ namespace QLYQUANAN.DTO
         public BillInfo (DataRow row)
         {
             this.ID = (int) row ["id "];
-            this.BillID =(int)row  ["billID"];
-            this.FoodID = (int)row["foodID"];
+            this.BillID =(int)row  ["idbill"];
+            this.FoodID = (int)row["idfood"];
             this.Count = (int)row["count "] ;
 
         }

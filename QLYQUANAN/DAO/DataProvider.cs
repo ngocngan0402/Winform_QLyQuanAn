@@ -19,7 +19,7 @@ namespace QLYQUANAN.DAO
         }
         private DataProvider(){}
 
-        private string connectionSTR = @"Data Source=LAPTOP-A8RRGH2F\NNN; Initial Catalog=Quanlyquanan; Integrated Security=True";
+        private string connectionSTR = @"Data Source=TANONN;Initial Catalog=Quanlyquanan;Integrated Security=True";
 
      
 

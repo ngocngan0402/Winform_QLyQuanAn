@@ -20,8 +20,12 @@ namespace QLYQUANAN
 
            
         }
-       
+
+        private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
+    }
         
 
     }

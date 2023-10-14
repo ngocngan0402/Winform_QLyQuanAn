@@ -20,7 +20,10 @@ namespace QLYQUANAN.DTO
         {
             this.ID =(int) row["id"];
             this.dateChekIn = (DateTime?)row["dateCheckin"];
-            this.DateCheckOut = (DateTime?)row ["dateCheckOut"];
+            var dateCheckOutTemp = row["dateCheckOut"];
+            if( dateCheckOutTemp.ToString() != "" ) 
+                this.DateCheckOut = (DateTime?) dateCheckOutTemp;
+
             this.Status = (int)row["status"];
 
         }

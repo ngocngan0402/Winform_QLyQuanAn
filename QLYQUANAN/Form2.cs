@@ -45,16 +45,27 @@ namespace QLYQUANAN
             }
         }
 
-        void ShowBill(int id )
-        {
-
-        }
         #endregion
+
+        void ShowBill(int id)
+        {
+            lsvBill.Items.Clear();
+            List<QLYQUANAN.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
+
+            foreach (QLYQUANAN.DTO.Menu item in listBillInfo) 
+            {
+                ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
+                lsvItem.SubItems.Add(item.Count.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString());
+                lsvItem.SubItems.Add(item.TotalPrice.ToString());
+                lsvBill.Items.Add(lsvItem);
+            }
+        }
 
         #region Events
         private void btn_Click(object sender, EventArgs e)
         {
-            int TableID = (sender as Table).ID;
+            int TableID = ((sender as Button).Tag as Table).ID;
             ShowBill(TableID);
         }
         internal void show()
@@ -79,6 +90,13 @@ namespace QLYQUANAN
             f.ShowDialog();
         }
         #endregion
+
+        private void flpTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+ 
     }
 }
 
