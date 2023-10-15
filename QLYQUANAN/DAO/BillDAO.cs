@@ -13,7 +13,7 @@ namespace QLYQUANAN.DAO
         private static BillDAO instance;
         public static BillDAO Instace
         {
-            get { if (Instace == null) instance = new BillDAO(); return instance; }
+            get { if (Instace == null) { instance = new BillDAO(); } return instance; }
             private set { BillDAO.instance = value; }
 
         }
@@ -35,14 +35,18 @@ namespace QLYQUANAN.DAO
             }
             return -1;
         }
-        public void CheckOut(int id, int discount)
+        public void CheckOut(int id, int discount, float totalPrice)
         {
-            string query = "update dbo.Bill set status = 1," + "discount" + discount + " where id = " + id;
+            string query = "update dbo.Bill set dateCheckout = GETDATE(), status = 1," + "discount" + discount + ", totalPrice = " + totalPrice +" where id = " + id;
             DataProvider.Instance.ExecuteNonQuery(query);
         }
         public void InserBill(int id)
         {
             DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill idTable", new object[] { id });
+        }
+        public DataTable GetListBillByDate(DateTime checkIn, DateTime checkOut) 
+        {
+            return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn, @checkOut", new object[] {checkIn,checkOut});        
         }
         public int GetMaxIDBill()
         {

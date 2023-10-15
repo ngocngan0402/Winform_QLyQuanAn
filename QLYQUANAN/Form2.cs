@@ -136,7 +136,7 @@ namespace QLYQUANAN
             {
             if(MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng Tiền /100) x giảm giá\n => {1} - {{1} / 100} x {2} = {3}", table.Name,totalPrice,discount,finalTotalPrice),"Thông báo ",MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BillDAO.Instace.CheckOut(idBill, discount);
+                    BillDAO.Instace.CheckOut(idBill, discount,(float)finalTotalPrice);
                     ShowBill(table.ID);
                     LoadTable();
                 }
