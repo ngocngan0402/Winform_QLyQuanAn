@@ -33,5 +33,10 @@ namespace QLYQUANAN.DAO
 
         }
 
+
+        public void InserBillInfo(int idBill, int idFood, int count)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBillInfo @idBill , @idFood, @count", new object[] { idBill, idFood, count });
+        }
     }
 }

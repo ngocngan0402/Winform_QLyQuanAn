@@ -22,8 +22,21 @@ namespace QLYQUANAN
         {
             InitializeComponent();
             LoadTable();
+            loadCategory();
         }
         #region  Method
+        void loadCategory()
+        {
+            List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource = listCategory;
+            cbCategory.DisplayMember = "Name";
+        }
+        void loadFoodListByCategoryID(int id)
+        {
+            List<Food> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
+            cbFood.DataSource = listFood;
+            cbFood.DisplayMember = "Name";
+        }
         void LoadTable()
         {
             List<Table> tablesList = TableDAO.Instance.LoadTableList();
@@ -72,6 +85,7 @@ namespace QLYQUANAN
         private void btn_Click(object sender, EventArgs e)
         {
             int TableID = ((sender as Button).Tag as Table).ID;
+            lsvBill.Tag = (sender as Button).Tag;
             ShowBill(TableID);
         }
         internal void show()
@@ -109,6 +123,32 @@ namespace QLYQUANAN
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            int id = 0;
+            ComboBox cb = sender as ComboBox;
+            if (cb.SelectedItem == null)
+                return;
+
+            Category selected = cb.SelectedItem as Category;
+            id = selected.ID;
+            loadFoodListByCategoryID(id);
+        }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            Table table = lsvBill.Tag as Table;
+            int idBill = BillDAO.Instace.GetUncheckBillIDByTableID(table.ID);
+            int foodID = (cbFood.SelectedItem as Food).ID;
+            int count = (int)nmFoodCount.Value; 
+            if(idBill == -1) 
+            { 
+                BillDAO.Instace.InserBill(table.ID);
+                BillInfoDAO.instacne.InserBillInfo(BillDAO.Instace.GetMaxIDBill(), foodID, count);
+            }
+            else
+            {
+                BillInfoDAO.instacne.InserBillInfo(idBill, foodID, count);
+            }
+            ShowBill(table.ID);
 
         }
     }

@@ -40,24 +40,24 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.cbSwitchtable = new System.Windows.Forms.ComboBox();
             this.btnSwitchtable = new System.Windows.Forms.Button();
             this.nmDiscoutn = new System.Windows.Forms.NumericUpDown();
             this.btnDiscount = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.mnFoodCount = new System.Windows.Forms.NumericUpDown();
+            this.nmFoodCount = new System.Windows.Forms.NumericUpDown();
             this.btnFood = new System.Windows.Forms.Button();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscoutn)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mnFoodCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -161,6 +161,17 @@
             this.panel3.Size = new System.Drawing.Size(310, 64);
             this.panel3.TabIndex = 3;
             // 
+            // txbTotalPrice
+            // 
+            this.txbTotalPrice.Location = new System.Drawing.Point(152, 24);
+            this.txbTotalPrice.Name = "txbTotalPrice";
+            this.txbTotalPrice.ReadOnly = true;
+            this.txbTotalPrice.Size = new System.Drawing.Size(69, 20);
+            this.txbTotalPrice.TabIndex = 8;
+            this.txbTotalPrice.Text = "0";
+            this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txbTotalPrice.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // cbSwitchtable
             // 
             this.cbSwitchtable.FormattingEnabled = true;
@@ -212,7 +223,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.mnFoodCount);
+            this.panel4.Controls.Add(this.nmFoodCount);
             this.panel4.Controls.Add(this.btnFood);
             this.panel4.Controls.Add(this.cbFood);
             this.panel4.Controls.Add(this.cbCategory);
@@ -222,19 +233,19 @@
             this.panel4.Size = new System.Drawing.Size(302, 46);
             this.panel4.TabIndex = 4;
             // 
-            // mnFoodCount
+            // nmFoodCount
             // 
-            this.mnFoodCount.Location = new System.Drawing.Point(203, 15);
-            this.mnFoodCount.Margin = new System.Windows.Forms.Padding(2);
-            this.mnFoodCount.Minimum = new decimal(new int[] {
+            this.nmFoodCount.Location = new System.Drawing.Point(203, 15);
+            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(2);
+            this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
-            this.mnFoodCount.Name = "mnFoodCount";
-            this.mnFoodCount.Size = new System.Drawing.Size(80, 20);
-            this.mnFoodCount.TabIndex = 3;
-            this.mnFoodCount.Value = new decimal(new int[] {
+            this.nmFoodCount.Name = "nmFoodCount";
+            this.nmFoodCount.Size = new System.Drawing.Size(80, 20);
+            this.nmFoodCount.TabIndex = 3;
+            this.nmFoodCount.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -249,6 +260,7 @@
             this.btnFood.TabIndex = 2;
             this.btnFood.Text = "Thêm món";
             this.btnFood.UseVisualStyleBackColor = true;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // cbFood
             // 
@@ -267,6 +279,7 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(82, 21);
             this.cbCategory.TabIndex = 0;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // flpTable
             // 
@@ -276,17 +289,6 @@
             this.flpTable.Size = new System.Drawing.Size(245, 210);
             this.flpTable.TabIndex = 5;
             this.flpTable.Paint += new System.Windows.Forms.PaintEventHandler(this.flpTable_Paint);
-            // 
-            // txbTotalPrice
-            // 
-            this.txbTotalPrice.Location = new System.Drawing.Point(152, 24);
-            this.txbTotalPrice.Name = "txbTotalPrice";
-            this.txbTotalPrice.ReadOnly = true;
-            this.txbTotalPrice.Size = new System.Drawing.Size(69, 20);
-            this.txbTotalPrice.TabIndex = 8;
-            this.txbTotalPrice.Text = "0";
-            this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txbTotalPrice.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form2
             // 
@@ -310,7 +312,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscoutn)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mnFoodCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +331,7 @@
         private System.Windows.Forms.Button btnFood;
         private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.ComboBox cbCategory;
-        private System.Windows.Forms.NumericUpDown mnFoodCount;
+        private System.Windows.Forms.NumericUpDown nmFoodCount;
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private System.Windows.Forms.Button btnDiscount;
         private System.Windows.Forms.Button btnCheck;
