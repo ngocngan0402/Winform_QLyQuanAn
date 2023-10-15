@@ -24,6 +24,10 @@ namespace QLYQUANAN.DAO
         private DataRow item;
 
         private TableDAO() { }
+        public void SwithTable(int id1,int id2)
+        {
+            DataProvider.Instance.ExecuteQuery("USP_SwithTable @idTable1, @idTable2", new object[] { id1, id2 });
+        }
     
     public List<Table> LoadTableList()
         {

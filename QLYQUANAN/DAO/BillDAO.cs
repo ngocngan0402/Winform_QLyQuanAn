@@ -35,6 +35,11 @@ namespace QLYQUANAN.DAO
             }
             return -1;
         }
+        public void CheckOut(int id, int discount)
+        {
+            string query = "update dbo.Bill set status = 1," + "discount" + discount + " where id = " + id;
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
         public void InserBill(int id)
         {
             DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill idTable", new object[] { id });
@@ -50,10 +55,6 @@ namespace QLYQUANAN.DAO
                 return 1;
             }
         }
-        public void CheckOut(int id)
-        {
-            string query = "update dbo.Bill set status = 1 where id = "+ id;
-            DataProvider.Instance.ExecuteNonQuery(query);
-        }
+       
     }
 }

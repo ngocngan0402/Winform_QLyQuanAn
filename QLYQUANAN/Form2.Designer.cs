@@ -43,7 +43,7 @@
             this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.cbSwitchtable = new System.Windows.Forms.ComboBox();
             this.btnSwitchtable = new System.Windows.Forms.Button();
-            this.nmDiscoutn = new System.Windows.Forms.NumericUpDown();
+            this.nmDiscount = new System.Windows.Forms.NumericUpDown();
             this.btnDiscount = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,7 +55,7 @@
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmDiscoutn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.SuspendLayout();
@@ -132,27 +132,29 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 92;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 68;
+            this.columnHeader2.Width = 55;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 71;
+            this.columnHeader3.Width = 87;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thành Tiền";
+            this.columnHeader4.Width = 103;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txbTotalPrice);
             this.panel3.Controls.Add(this.cbSwitchtable);
             this.panel3.Controls.Add(this.btnSwitchtable);
-            this.panel3.Controls.Add(this.nmDiscoutn);
+            this.panel3.Controls.Add(this.nmDiscount);
             this.panel3.Controls.Add(this.btnDiscount);
             this.panel3.Controls.Add(this.btnCheck);
             this.panel3.Location = new System.Drawing.Point(410, 365);
@@ -190,15 +192,16 @@
             this.btnSwitchtable.TabIndex = 6;
             this.btnSwitchtable.Text = "Chuyển bàn";
             this.btnSwitchtable.UseVisualStyleBackColor = true;
+            this.btnSwitchtable.Click += new System.EventHandler(this.btnSwitchtable_Click);
             // 
-            // nmDiscoutn
+            // nmDiscount
             // 
-            this.nmDiscoutn.Location = new System.Drawing.Point(78, 35);
-            this.nmDiscoutn.Margin = new System.Windows.Forms.Padding(2);
-            this.nmDiscoutn.Name = "nmDiscoutn";
-            this.nmDiscoutn.Size = new System.Drawing.Size(69, 20);
-            this.nmDiscoutn.TabIndex = 5;
-            this.nmDiscoutn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nmDiscount.Location = new System.Drawing.Point(78, 35);
+            this.nmDiscount.Margin = new System.Windows.Forms.Padding(2);
+            this.nmDiscount.Name = "nmDiscount";
+            this.nmDiscount.Size = new System.Drawing.Size(69, 20);
+            this.nmDiscount.TabIndex = 5;
+            this.nmDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnDiscount
             // 
@@ -310,7 +313,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmDiscoutn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.ResumeLayout(false);
@@ -335,7 +338,7 @@
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private System.Windows.Forms.Button btnDiscount;
         private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.NumericUpDown nmDiscoutn;
+        private System.Windows.Forms.NumericUpDown nmDiscount;
         private System.Windows.Forms.ComboBox cbSwitchtable;
         private System.Windows.Forms.Button btnSwitchtable;
         private System.Windows.Forms.ColumnHeader columnHeader1;

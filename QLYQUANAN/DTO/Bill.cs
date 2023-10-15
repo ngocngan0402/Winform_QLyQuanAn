@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,13 @@ namespace QLYQUANAN.DTO
 {
    public  class Bill
     {
-        public Bill(int id, DateTime? dateCheckin, DateTime? dateCheckOut, int status )
+        public Bill(int id, DateTime? dateCheckin, DateTime? dateCheckOut, int status ,int discount =0)
         {
             this.ID= id;
             this.dateChekIn = dateCheckin;
             this.DateCheckOut = dateCheckOut;
             this.Status = status;
+            this.Discount = discount;
         }
         public Bill(DataRow row)
         {
@@ -26,6 +28,14 @@ namespace QLYQUANAN.DTO
 
             this.Status = (int)row["status"];
 
+            if (row["discount"].ToString() != "")
+                this.discount = (int)row["discount"];
+        }
+        private int discount;
+        public int Discount
+        {
+            get { return discount; }
+            set{ this.discount = value; }
         }
         private int Status
         {
