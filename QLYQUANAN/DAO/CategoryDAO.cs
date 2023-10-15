@@ -21,7 +21,7 @@ namespace QLYQUANAN.DAO
         public List<Category> GetListCategory()
         {
             List<Category> list = new List<Category>();
-            string query = "select * from FoodCastegory";
+            string query = "select * from Foodcategory";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)

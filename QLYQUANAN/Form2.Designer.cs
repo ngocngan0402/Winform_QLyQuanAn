@@ -69,7 +69,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(587, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -106,10 +106,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.lsvBill);
-            this.panel2.Location = new System.Drawing.Point(274, 73);
+            this.panel2.Location = new System.Drawing.Point(419, 92);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 155);
+            this.panel2.Size = new System.Drawing.Size(354, 255);
             this.panel2.TabIndex = 2;
             // 
             // lsvBill
@@ -121,10 +121,10 @@
             this.columnHeader4});
             this.lsvBill.GridLines = true;
             this.lsvBill.HideSelection = false;
-            this.lsvBill.Location = new System.Drawing.Point(8, 2);
+            this.lsvBill.Location = new System.Drawing.Point(2, 2);
             this.lsvBill.Margin = new System.Windows.Forms.Padding(2);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(295, 152);
+            this.lsvBill.Size = new System.Drawing.Size(350, 251);
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -155,15 +155,15 @@
             this.panel3.Controls.Add(this.nmDiscoutn);
             this.panel3.Controls.Add(this.btnDiscount);
             this.panel3.Controls.Add(this.btnCheck);
-            this.panel3.Location = new System.Drawing.Point(267, 232);
+            this.panel3.Location = new System.Drawing.Point(410, 365);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(310, 64);
+            this.panel3.Size = new System.Drawing.Size(363, 68);
             this.panel3.TabIndex = 3;
             // 
             // txbTotalPrice
             // 
-            this.txbTotalPrice.Location = new System.Drawing.Point(152, 24);
+            this.txbTotalPrice.Location = new System.Drawing.Point(176, 24);
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.ReadOnly = true;
             this.txbTotalPrice.Size = new System.Drawing.Size(69, 20);
@@ -212,7 +212,7 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(231, 4);
+            this.btnCheck.Location = new System.Drawing.Point(284, 4);
             this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(77, 58);
@@ -227,7 +227,7 @@
             this.panel4.Controls.Add(this.btnFood);
             this.panel4.Controls.Add(this.cbFood);
             this.panel4.Controls.Add(this.cbCategory);
-            this.panel4.Location = new System.Drawing.Point(273, 23);
+            this.panel4.Location = new System.Drawing.Point(418, 42);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(302, 46);
@@ -235,7 +235,7 @@
             // 
             // nmFoodCount
             // 
-            this.nmFoodCount.Location = new System.Drawing.Point(203, 15);
+            this.nmFoodCount.Location = new System.Drawing.Point(250, 15);
             this.nmFoodCount.Margin = new System.Windows.Forms.Padding(2);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
@@ -243,7 +243,7 @@
             0,
             -2147483648});
             this.nmFoodCount.Name = "nmFoodCount";
-            this.nmFoodCount.Size = new System.Drawing.Size(80, 20);
+            this.nmFoodCount.Size = new System.Drawing.Size(33, 20);
             this.nmFoodCount.TabIndex = 3;
             this.nmFoodCount.Value = new decimal(new int[] {
             1,
@@ -253,7 +253,7 @@
             // 
             // btnFood
             // 
-            this.btnFood.Location = new System.Drawing.Point(116, 10);
+            this.btnFood.Location = new System.Drawing.Point(159, 8);
             this.btnFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnFood.Name = "btnFood";
             this.btnFood.Size = new System.Drawing.Size(69, 27);
@@ -268,7 +268,7 @@
             this.cbFood.Location = new System.Drawing.Point(3, 19);
             this.cbFood.Margin = new System.Windows.Forms.Padding(2);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(82, 21);
+            this.cbFood.Size = new System.Drawing.Size(138, 21);
             this.cbFood.TabIndex = 1;
             // 
             // cbCategory
@@ -277,7 +277,7 @@
             this.cbCategory.Location = new System.Drawing.Point(3, 3);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(82, 21);
+            this.cbCategory.Size = new System.Drawing.Size(138, 21);
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -286,7 +286,7 @@
             this.flpTable.Location = new System.Drawing.Point(8, 42);
             this.flpTable.Margin = new System.Windows.Forms.Padding(2);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(245, 210);
+            this.flpTable.Size = new System.Drawing.Size(389, 381);
             this.flpTable.TabIndex = 5;
             this.flpTable.Paint += new System.Windows.Forms.PaintEventHandler(this.flpTable_Paint);
             // 
@@ -294,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 307);
+            this.ClientSize = new System.Drawing.Size(784, 472);
             this.Controls.Add(this.flpTable);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
