@@ -258,7 +258,7 @@
             // 
             this.panel7.Controls.Add(this.txbSearchFoodname);
             this.panel7.Controls.Add(this.btnSearchFood);
-            this.panel7.Location = new System.Drawing.Point(260, 11);
+            this.panel7.Location = new System.Drawing.Point(474, 13);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(239, 31);
@@ -288,7 +288,7 @@
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.panel9);
             this.panel6.Controls.Add(this.panel8);
-            this.panel6.Location = new System.Drawing.Point(265, 55);
+            this.panel6.Location = new System.Drawing.Point(479, 57);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(234, 189);
@@ -298,7 +298,7 @@
             // 
             this.panel11.Controls.Add(this.nmFoodPrice);
             this.panel11.Controls.Add(this.label3);
-            this.panel11.Location = new System.Drawing.Point(6, 144);
+            this.panel11.Location = new System.Drawing.Point(18, 144);
             this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(179, 31);
@@ -399,11 +399,11 @@
             // 
             // txbFoodId
             // 
-            this.txbFoodId.Location = new System.Drawing.Point(27, 6);
+            this.txbFoodId.Location = new System.Drawing.Point(35, 5);
             this.txbFoodId.Margin = new System.Windows.Forms.Padding(2);
             this.txbFoodId.Name = "txbFoodId";
             this.txbFoodId.ReadOnly = true;
-            this.txbFoodId.Size = new System.Drawing.Size(110, 20);
+            this.txbFoodId.Size = new System.Drawing.Size(134, 20);
             this.txbFoodId.TabIndex = 1;
             this.txbFoodId.TextChanged += new System.EventHandler(this.txbFoodId_TextChanged);
             // 
@@ -427,12 +427,12 @@
             this.panel5.Location = new System.Drawing.Point(0, 11);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(238, 31);
+            this.panel5.Size = new System.Drawing.Size(406, 31);
             this.panel5.TabIndex = 1;
             // 
             // btnShowFood
             // 
-            this.btnShowFood.Location = new System.Drawing.Point(172, 5);
+            this.btnShowFood.Location = new System.Drawing.Point(343, 2);
             this.btnShowFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowFood.Name = "btnShowFood";
             this.btnShowFood.Size = new System.Drawing.Size(50, 27);
@@ -442,7 +442,7 @@
             // 
             // btEditFood
             // 
-            this.btEditFood.Location = new System.Drawing.Point(118, 4);
+            this.btEditFood.Location = new System.Drawing.Point(240, 2);
             this.btEditFood.Margin = new System.Windows.Forms.Padding(2);
             this.btEditFood.Name = "btEditFood";
             this.btEditFood.Size = new System.Drawing.Size(50, 27);
@@ -453,7 +453,7 @@
             // 
             // btnDeleteFood
             // 
-            this.btnDeleteFood.Location = new System.Drawing.Point(64, 4);
+            this.btnDeleteFood.Location = new System.Drawing.Point(117, 2);
             this.btnDeleteFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteFood.Name = "btnDeleteFood";
             this.btnDeleteFood.Size = new System.Drawing.Size(50, 27);
@@ -479,7 +479,7 @@
             this.panel4.Location = new System.Drawing.Point(2, 55);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 191);
+            this.panel4.Size = new System.Drawing.Size(473, 325);
             this.panel4.TabIndex = 0;
             // 
             // dtgvFood
@@ -490,7 +490,7 @@
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.RowHeadersWidth = 62;
             this.dtgvFood.RowTemplate.Height = 28;
-            this.dtgvFood.Size = new System.Drawing.Size(231, 187);
+            this.dtgvFood.Size = new System.Drawing.Size(468, 321);
             this.dtgvFood.TabIndex = 0;
             // 
             // tpFoodCategory

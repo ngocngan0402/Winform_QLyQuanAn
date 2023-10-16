@@ -57,18 +57,18 @@
             this.panel2.Controls.Add(this.txbUserName);
             this.panel2.Controls.Add(this.lblTendangnhap);
             this.panel2.Location = new System.Drawing.Point(2, 8);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(523, 47);
+            this.panel2.Size = new System.Drawing.Size(594, 47);
             this.panel2.TabIndex = 1;
             // 
             // txbUserName
             // 
             this.txbUserName.Location = new System.Drawing.Point(141, 16);
-            this.txbUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.ReadOnly = true;
-            this.txbUserName.Size = new System.Drawing.Size(68, 20);
+            this.txbUserName.Size = new System.Drawing.Size(369, 20);
             this.txbUserName.TabIndex = 1;
             // 
             // lblTendangnhap
@@ -87,18 +87,18 @@
             this.panel1.Controls.Add(this.txbDisplayname);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(2, 66);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(523, 47);
+            this.panel1.Size = new System.Drawing.Size(594, 47);
             this.panel1.TabIndex = 2;
             // 
             // txbDisplayname
             // 
-            this.txbDisplayname.Location = new System.Drawing.Point(124, 6);
-            this.txbDisplayname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDisplayname.Location = new System.Drawing.Point(141, 6);
+            this.txbDisplayname.Margin = new System.Windows.Forms.Padding(2);
             this.txbDisplayname.Name = "txbDisplayname";
             this.txbDisplayname.ReadOnly = true;
-            this.txbDisplayname.Size = new System.Drawing.Size(68, 20);
+            this.txbDisplayname.Size = new System.Drawing.Size(369, 20);
             this.txbDisplayname.TabIndex = 1;
             // 
             // label1
@@ -117,17 +117,17 @@
             this.panel3.Controls.Add(this.txbPassword);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(5, 123);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(523, 47);
+            this.panel3.Size = new System.Drawing.Size(591, 47);
             this.panel3.TabIndex = 3;
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(124, 6);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbPassword.Location = new System.Drawing.Point(138, 5);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(68, 20);
+            this.txbPassword.Size = new System.Drawing.Size(369, 20);
             this.txbPassword.TabIndex = 1;
             this.txbPassword.UseSystemPasswordChar = true;
             // 
@@ -147,17 +147,17 @@
             this.panel4.Controls.Add(this.txbNewpass);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(2, 181);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(523, 47);
+            this.panel4.Size = new System.Drawing.Size(594, 47);
             this.panel4.TabIndex = 4;
             // 
             // txbNewpass
             // 
-            this.txbNewpass.Location = new System.Drawing.Point(124, 6);
-            this.txbNewpass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbNewpass.Location = new System.Drawing.Point(141, 5);
+            this.txbNewpass.Margin = new System.Windows.Forms.Padding(2);
             this.txbNewpass.Name = "txbNewpass";
-            this.txbNewpass.Size = new System.Drawing.Size(68, 20);
+            this.txbNewpass.Size = new System.Drawing.Size(369, 20);
             this.txbNewpass.TabIndex = 1;
             // 
             // label3
@@ -176,17 +176,17 @@
             this.panel5.Controls.Add(this.txbReenterpass);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(5, 233);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(523, 47);
+            this.panel5.Size = new System.Drawing.Size(591, 47);
             this.panel5.TabIndex = 5;
             // 
             // txbReenterpass
             // 
-            this.txbReenterpass.Location = new System.Drawing.Point(152, 6);
-            this.txbReenterpass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbReenterpass.Location = new System.Drawing.Point(138, 5);
+            this.txbReenterpass.Margin = new System.Windows.Forms.Padding(2);
             this.txbReenterpass.Name = "txbReenterpass";
-            this.txbReenterpass.Size = new System.Drawing.Size(68, 20);
+            this.txbReenterpass.Size = new System.Drawing.Size(369, 20);
             this.txbReenterpass.TabIndex = 1;
             // 
             // label4
@@ -203,7 +203,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(373, 285);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(91, 23);
             this.btnUpdate.TabIndex = 6;
@@ -215,7 +215,7 @@
             // 
             this.btnExti.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExti.Location = new System.Drawing.Point(468, 285);
-            this.btnExti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExti.Margin = new System.Windows.Forms.Padding(2);
             this.btnExti.Name = "btnExti";
             this.btnExti.Size = new System.Drawing.Size(91, 23);
             this.btnExti.TabIndex = 7;
@@ -237,7 +237,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Cá Nhân";

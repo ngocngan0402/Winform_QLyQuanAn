@@ -47,8 +47,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(788, 390);
+            this.panel1.Size = new System.Drawing.Size(525, 121);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -57,16 +58,18 @@
             this.panel3.Controls.Add(this.btnExit);
             this.panel3.Controls.Add(this.txbPassWord);
             this.panel3.Controls.Add(this.lblPasswork);
-            this.panel3.Location = new System.Drawing.Point(3, 95);
+            this.panel3.Location = new System.Drawing.Point(2, 62);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(785, 73);
+            this.panel3.Size = new System.Drawing.Size(523, 47);
             this.panel3.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(541, 25);
+            this.btnLogin.Location = new System.Drawing.Point(361, 16);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(138, 36);
+            this.btnLogin.Size = new System.Drawing.Size(92, 23);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(685, 25);
+            this.btnExit.Location = new System.Drawing.Point(457, 16);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 40);
+            this.btnExit.Size = new System.Drawing.Size(50, 26);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "thoát";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -85,9 +89,10 @@
             // 
             // txbPassWord
             // 
-            this.txbPassWord.Location = new System.Drawing.Point(186, 10);
+            this.txbPassWord.Location = new System.Drawing.Point(124, 6);
+            this.txbPassWord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbPassWord.Name = "txbPassWord";
-            this.txbPassWord.Size = new System.Drawing.Size(100, 26);
+            this.txbPassWord.Size = new System.Drawing.Size(68, 20);
             this.txbPassWord.TabIndex = 1;
             this.txbPassWord.UseSystemPasswordChar = true;
             // 
@@ -95,9 +100,10 @@
             // 
             this.lblPasswork.AutoSize = true;
             this.lblPasswork.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswork.Location = new System.Drawing.Point(3, 6);
+            this.lblPasswork.Location = new System.Drawing.Point(2, 4);
+            this.lblPasswork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPasswork.Name = "lblPasswork";
-            this.lblPasswork.Size = new System.Drawing.Size(118, 29);
+            this.lblPasswork.Size = new System.Drawing.Size(78, 19);
             this.lblPasswork.TabIndex = 0;
             this.lblPasswork.Text = "Mật khẩu";
             // 
@@ -105,37 +111,41 @@
             // 
             this.panel2.Controls.Add(this.txbUserName);
             this.panel2.Controls.Add(this.lblTendangnhap);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(785, 73);
+            this.panel2.Size = new System.Drawing.Size(523, 47);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txbUserName
             // 
-            this.txbUserName.Location = new System.Drawing.Point(186, 10);
+            this.txbUserName.Location = new System.Drawing.Point(124, 6);
+            this.txbUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(100, 26);
+            this.txbUserName.Size = new System.Drawing.Size(68, 20);
             this.txbUserName.TabIndex = 1;
             // 
             // lblTendangnhap
             // 
             this.lblTendangnhap.AutoSize = true;
             this.lblTendangnhap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTendangnhap.Location = new System.Drawing.Point(3, 6);
+            this.lblTendangnhap.Location = new System.Drawing.Point(2, 4);
+            this.lblTendangnhap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTendangnhap.Name = "lblTendangnhap";
-            this.lblTendangnhap.Size = new System.Drawing.Size(186, 29);
+            this.lblTendangnhap.Size = new System.Drawing.Size(124, 19);
             this.lblTendangnhap.TabIndex = 0;
             this.lblTendangnhap.Text = "Tên đăng nhập";
             // 
             // Form1
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 130);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
