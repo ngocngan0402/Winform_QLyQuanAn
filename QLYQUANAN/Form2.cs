@@ -133,7 +133,33 @@ namespace QLYQUANAN
         private void addminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form4 f = new Form4();
+            f.InsertFood += F_InsertFood;
+            f.DeleteFood += F_DeleteFood;
+            f.UpdateFood += F_UpdateFood;
+
             f.ShowDialog();
+        }
+
+        private void F_UpdateFood(object sender, EventArgs e)
+        {
+            loadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
+        }
+
+        private void F_DeleteFood(object sender, EventArgs e)
+        {
+            loadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
+            LoadTable();
+        }
+
+        private void F_InsertFood(object sender, EventArgs e)
+        {
+            loadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if(lsvBill.Tag != null)
+                ShowBill((lsvBill.Tag as Table).ID);
         }
         #endregion
 
@@ -141,7 +167,7 @@ namespace QLYQUANAN
         {
 
         }
-
+  
         private void btnCheck_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
@@ -177,6 +203,11 @@ namespace QLYQUANAN
         private void btnFood_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
+            if(table == null)
+            {
+                MessageBox.Show("Hãy chọn bàn");
+                return;
+            }
             int idBill = BillDAO.Instace.GetUncheckBillIDByTableID(table.ID);
             int foodID = (cbFood.SelectedItem as Food).ID;
             int count = (int)nmFoodCount.Value; 
@@ -190,7 +221,7 @@ namespace QLYQUANAN
                 BillInfoDAO.instacne.InserBillInfo(idBill, foodID, count);
             }
             ShowBill(table.ID);
-
+            LoadTable();
         }
 
         private void btnSwitchtable_Click(object sender, EventArgs e)

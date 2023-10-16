@@ -18,7 +18,10 @@ namespace QLYQUANAN.DAO
            private  set { BillInfoDAO.instacne = value; }
         }
         private BillInfoDAO() { }
-
+        public void DeleteBillInfoByFoodID(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("delete FROM dbo.BillInfo WHERE idFood = " + id);
+        }
         public List<BillInfo> GetListBillInfo(int id )
 
         {
