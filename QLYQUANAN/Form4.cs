@@ -17,10 +17,15 @@ namespace QLYQUANAN
         public Form4()
         {
             InitializeComponent();
+            Load();
+
+        }
+        
+        void Load()
+        {
             LoadDateTimePickerBill();
             LoadListBillByDate(dtpkFormDate.Value, dtpkFormDate.Value);
-
-
+            LoadListFood();
         }
 
         void LoadDateTimePickerBill()
@@ -34,7 +39,11 @@ namespace QLYQUANAN
         {
             dtgvBill.DataSource = BillDAO.Instace.GetListBillByDate(checkIn, checkOut);
         }
-  
+        
+        void LoadListFood()
+        {
+            dtgvFood.DataSource = FoodDAO.Instance.GetListFood();
+        }
 
         private void btnViewbill_Click(object sender, EventArgs e)
         {
