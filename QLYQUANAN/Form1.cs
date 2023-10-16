@@ -1,4 +1,5 @@
 ﻿using QLYQUANAN.DAO;
+using QLYQUANAN.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace QLYQUANAN
 {
     public partial class Form1 : Form
     {
+
+        
         public object MasageBox { get; private set; }
         public object MasageBoxButtons { get; private set; }
         public object MassageBox { get; private set; }
@@ -20,7 +23,11 @@ namespace QLYQUANAN
         public Form1()
         {
             InitializeComponent();
+
+        
         }
+
+    
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -28,8 +35,8 @@ namespace QLYQUANAN
             string passWord = txbPassWord.Text;
             if (Login (userName, passWord))
             {
-
-                Form2 f = new Form2();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName (userName);
+                Form2 f = new Form2(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

@@ -24,6 +24,22 @@ namespace QLYQUANAN.DAO
 
             return result.Rows.Count > 0;
         }
+
+        public bool UpdateAccount(string userName, string displayName, string pass, string newPass)
+        {
+            int resuft = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName, @displayName,@password, @newPassword", new object[] {userName,displayName,pass,newPass});
+            return resuft > 0;
+        }
+
+        public DTO.Account GetAccountByUserName(string userName)
+        {
+           DataTable data=  DataProvider.Instance.ExecuteQuery("select * from account where user = '" + userName + "'");
+            foreach(DataRow item in data.Rows)
+            {
+                return new DTO.Account(item);
+            }
+            return null;
+        }
     }
 }
 

@@ -11,21 +11,36 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QLYQUANAN.Form3;
 
 namespace QLYQUANAN
 {
     public partial class Form2 : Form
     {
         private object environment;
-
-        public Form2()
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
+        public Form2(Account acc)
         {
             InitializeComponent();
+
+            this.LoginAccount = acc;
             LoadTable();
             loadCategory();
             LoadConboboxTable(cbSwitchtable);
+            
         }
+
         #region  Method
+        void ChangeAccount(int type)
+        {
+            addminToolStripMenuItem.Enabled = type == 1;
+            thôngTinCáToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+        }
         void loadCategory()
         {
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
@@ -107,10 +122,14 @@ namespace QLYQUANAN
 
         private void thôngTinCáToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
+            Form3 f = new Form3(loginAccount);
+            f.UpdateAccount += f_UpdateAccount;
             f.ShowDialog();
         }
-
+        void f_UpdateAccount(object sender, AccountEvent e)
+        {
+            thôngTinCáToolStripMenuItem.Text = "Thông tin tài khoảng (" + e.Acc.DisplayName + ")";
+        }
         private void addminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form4 f = new Form4();
